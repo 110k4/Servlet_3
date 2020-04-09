@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-<!-- BootStrap API -->  
+<!-- BootStrap API --> 
 </head>
 <body>
 <!-- Nav -->
@@ -19,7 +19,7 @@
       <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="${pageContext.request.contextPath}/index">Home</a></li>
+      <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Page 1-1</a></li>
@@ -42,10 +42,38 @@
     <h1>Bootstrap Tutorial</h1>      
     <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
   </div>
-  <p>This is some text.</p>      
-  <p>This is another text.</p>      
 </div>
 
-	<h1>Add Point Branch</h1>
+<div class="container">
+	<div class="row">
+		
+		<table class="table table-hover">
+			<tr class="danger">
+				<td>번호</td>
+				<td>이름</td>
+				<td>국어</td>
+				<td>영어</td>
+				<td>수학</td>
+				<td>총점</td>
+				<td>평균</td>
+			</tr>	
+			
+				<tr class="info">
+					<td>${dto.num}</td>
+					<td>${dto.name}</td>
+					<td>${dto.kor}</td>
+					<td>${dto.eng}</td>
+					<td>${dto.math}</td>
+					<td>${dto.total}</td>
+					<td>${dto.avg}</td>
+				</tr>
+		
+		</table>
+		
+		<a href="" class="btn btn-primary">Update</a>
+		<a href="./pointDelete?num=${dto.num}" class="btn btn-danger">Delete</a>
+			
+	</div>
+</div>
 </body>
 </html>

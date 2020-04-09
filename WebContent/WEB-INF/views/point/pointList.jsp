@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,7 +20,7 @@
       <a class="navbar-brand" href="#">WebSiteName</a>
     </div>
     <ul class="nav navbar-nav">
-      <li class="active"><a href="${pageContext.request.contextPath}/index">Home</a></li>
+      <li class="active"><a href="${pageContext.request.contextPath}">Home</a></li>
       <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
         <ul class="dropdown-menu">
           <li><a href="#">Page 1-1</a></li>
@@ -42,10 +43,39 @@
     <h1>Bootstrap Tutorial</h1>      
     <p>Bootstrap is the most popular HTML, CSS, and JS framework for developing responsive, mobile-first projects on the web.</p>
   </div>
-  <p>This is some text.</p>      
-  <p>This is another text.</p>      
 </div>
 
-	<h1>Add Point Branch</h1>
+<div class="container">
+	<div class="row">
+		<h1>Point List Page</h1>
+		
+		<table class="table table-hover">
+			<tr>
+				<td>번호</td>
+				<td>이름</td>
+				<td>평균</td>
+			</tr>	
+			
+			<c:forEach items="${list}" var="dto">
+				<tr>
+					<td>${dto.num}</td>
+					<td><a href="./pointSelect?num=${dto.num}">${dto.name}</a></td>
+					<td>${dto.avg}</td>
+				</tr>
+			</c:forEach>	
+		
+		</table>
+		
+		<a href="./pointAdd" class="btn btn-primary">Point Add</a>
+			
+	</div>
+</div>
+
+
+
+
+
+
+	
 </body>
 </html>
