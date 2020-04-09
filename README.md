@@ -24,3 +24,5 @@
  - /point/pointDelete	/ 					/ GET
 
 # Home Add
+# Home Add2
+
