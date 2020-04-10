@@ -29,6 +29,12 @@
 	//js  document.getElementById
 	//js  document.querySelector
 	//jquery $(선택자)
+	$("#upd").on("click", function () {
+		location.href="./memberDelete";
+	})
+	
+	
+	
 	$("#del").click(function() {
 		var result = confirm("탈퇴 할거냐???");
 		if(result){
